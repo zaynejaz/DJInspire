@@ -1,175 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>DJI - Inspire 2</title>
 
-      <title>DJI - Inspire 2</title>
+        <link rel="icon" type="image/png" href="assets/favicon.ico" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/media-queries.css" />
 
-      <link rel="icon" type="image/png" href="assets/favicon.ico">
-      <link rel="stylesheet" href="css/style.css">
-      <link rel="stylesheet" href="css/media-queries.css">
+        <!-- GOOGLE FONTS -->
+        <link
+            href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap"
+            rel="stylesheet"
+        />
 
-      <!-- GOOGLE FONTS -->
-      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
+        <!-- FONTAWESOME -->
+        <link
+            href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+            rel="stylesheet"
+        />
 
-      <!-- FONTAWESOME -->
-      <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <!-- BOOTSTRAP CDN -->
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-      <!-- BOOTSTRAP CDN -->
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- GSAP -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    </head>
 
-      <!-- GSAP -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
-</head>
-
-<body>
-
-      <div class="container">
-
+    <body>
+        <div class="container">
             <div id="overlay" onclick="off()">
-                  <iframe id="video"
-                        src="https://www.djivideos.com/watch/468602a3-956e-403d-bf34-ef6417e8904e?autoplay=false"
-                        frameborder="0" allowfullscreen></iframe>
+                <iframe
+                    id="video"
+                    src="https://www.djivideos.com/watch/468602a3-956e-403d-bf34-ef6417e8904e?autoplay=false"
+                    frameborder="0"
+                    allowfullscreen
+                ></iframe>
             </div>
 
             <div class="left"></div>
             <div class="right"></div>
 
-
             <!-- NAVBAR STARTS-->
             <nav>
-                  <div class="menu">
-                        <ul>
-                              <div class="div-logo">
-                                    <li class="menu-item logo">
-                                          <a href="/html/index.html">
-                                                <img src="/assets/logo.png" alt="dji logo">
-                                          </a>
-                                    </li>
-                              </div>
-                              <div class="nav-menu">
-                                    <li class="menu-item nav-link">
-                                          <a href="#">specs</a>
-                                    </li>
-                                    <li class="menu-item nav-link">
-                                          <a href="#">video</a>
-                                    </li>
-                                    <li class="menu-item nav-link">
-                                          <a href="#">downloads</a>
-                                    </li>
-                                    <li class="menu-item nav-link">
-                                          <a href="#">FAQ</a>
-                                    </li>
-                                    <li class="menu-item nav-link">
-                                          <a href="#">shop</a>
-                                    </li>
-
-                              </div>
-                              <li class="menu-item menu-icon" id="search">
-                                    <a href="#">
-                                          <i class="fa fa-search"></i>
-                                    </a>
-                              </li>
-                              <li class="menu-item menu-icon" id="cart">
-                                    <a href="#">
-                                          <i class="fa fa-shopping-cart"></i>
-                                    </a>
-                              </li>
-
-
-                        </ul>
-                        <div class="search-form">
-                              <form action="">
-                                    <input type="text" placeholder="Search dji..." autofocus>
-                              </form>
+                <div class="menu">
+                    <ul>
+                        <div class="div-logo">
+                            <li class="menu-item logo">
+                                <a href="javascript:void(0)">
+                                    <img src="assets/logo.png" alt="dji logo" />
+                                </a>
+                            </li>
                         </div>
-                        <a href="#" class="search-close menu-icon" id="close"><i class="fa fa-close"></i></a>
-                  </div>
+                        <div class="nav-menu">
+                            <li class="menu-item nav-link">
+                                <a href="javascript:void(0)">specs</a>
+                            </li>
+                            <li class="menu-item nav-link">
+                                <a href="javascript:void(0)">video</a>
+                            </li>
+                            <li class="menu-item nav-link">
+                                <a href="javascript:void(0)">downloads</a>
+                            </li>
+                            <li class="menu-item nav-link">
+                                <a href="javascript:void(0)">FAQ</a>
+                            </li>
+                            <li class="menu-item nav-link">
+                                <a href="javascript:void(0)">shop</a>
+                            </li>
+                        </div>
+                        <li class="menu-item menu-icon" id="search">
+                            <a href="javascript:void(0)">
+                                <i class="fa fa-search"></i>
+                            </a>
+                        </li>
+                        <li class="menu-item menu-icon" id="cart">
+                            <a href="javascript:void(0)">
+                                <i class="fa fa-shopping-cart"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="search-form">
+                        <form action="">
+                            <input
+                                type="text"
+                                placeholder="Search dji..."
+                                autofocus
+                            />
+                        </form>
+                    </div>
+                    <a
+                        href="javascript:void(0)"
+                        class="search-close menu-icon"
+                        id="close"
+                        ><i class="fa fa-close"></i
+                    ></a>
+                </div>
             </nav>
             <!-- NAVBAR ENDS -->
 
             <div class="right-sidebar">
-
-                  <ul>
-                        <li class="social-links">
-                              <a href="https://www.facebook.com/dji">
-                                    <i class="fa fa-facebook-f"></i>
-                              </a>
-                        </li>
-                        <li class="social-links">
-                              <a href="https://www.twitter.com/djiglobal">
-                                    <i class="fa fa-twitter"></i>
-                              </a>
-                        </li>
-                        <li class="social-links">
-                              <a href="https://www.youtube.com/djiinnovations">
-                                    <i class="fa fa-youtube-play"></i>
-                              </a>
-                        </li>
-                        <li class="social-links">
-                              <a href="https://www.vimeo.com/dji">
-                                    <i class="fa fa-vimeo"></i>
-                              </a>
-                        </li>
-                        <li class="social-links">
-                              <a href="https://www.instagram.com/djiglobal">
-                                    <i class="fa fa-instagram"></i>
-                              </a>
-                        </li>
-                  </ul>
-
+                <ul>
+                    <li class="social-links">
+                        <a href="https://www.facebook.com/dji">
+                            <i class="fa fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li class="social-links">
+                        <a href="https://www.twitter.com/djiglobal">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="social-links">
+                        <a href="https://www.youtube.com/djiinnovations">
+                            <i class="fa fa-youtube-play"></i>
+                        </a>
+                    </li>
+                    <li class="social-links">
+                        <a href="https://www.vimeo.com/dji">
+                            <i class="fa fa-vimeo"></i>
+                        </a>
+                    </li>
+                    <li class="social-links">
+                        <a href="https://www.instagram.com/djiglobal">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
             </div>
 
             <div class="center-bottom">
-                  <button class="btn">buy now</button>
+                <button class="btn">buy now</button>
             </div>
 
             <div class="left-bottom">
-                  <p>power beyond imagination</p>
-
+                <p>power beyond imagination</p>
             </div>
 
             <div class="left-sidebar">
+                <h1 class="product-title">
+                    <span>inspire 2</span><br />
+                    carbotanium edition
+                </h1>
 
+                <p class="desc">
+                    Image quality, power and intelligence to meet the needs of
+                    professional filmmakers and enterprises around the globe.
+                </p>
 
-                  <h1 class="product-title"><span>inspire 2</span><br> carbotanium edition</h1>
-
-                  <p class="desc">Image quality, power and intelligence to meet the needs of professional filmmakers and
-                        enterprises around the globe.</p>
-
-                  <div class="video-link" id="video-link" onclick="on()">
-                        <div class="video-play"></div>
-                  </div>
+                <div class="video-link" id="video-link" onclick="on()">
+                    <div class="video-play"></div>
+                </div>
             </div>
 
             <div class="product" id="product">
-                  <img src="/assets/drone-inspire.png" alt="drone">
+                <img src="assets/drone-inspire.png" alt="drone" />
             </div>
 
             <div class="media">
-                  <ul>
-                        <li class="webExp">Feedback on web experience? <br><a href="#">Click here</a></li>
-                  </ul>
+                <ul>
+                    <li class="webExp">
+                        Feedback on web experience? <br /><a
+                            href="javascript:void(0)"
+                            >Click here</a
+                        >
+                    </li>
+                </ul>
             </div>
+        </div>
 
-      </div>
+        <!-- jQuery CDN -->
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 
+        <!-- JAVASCRIPT -->
+        <script type="text/javascript" src="js/script.js"></script>
 
-
-      <!-- jQuery CDN -->
-      <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-
-      <!-- JAVASCRIPT -->
-      <script type="text/javascript" src="/js/script.js"></script>
-
-
-      <script>
-
-      </script>
-</body>
-
+        <script></script>
+    </body>
 </html>
